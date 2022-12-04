@@ -15,7 +15,7 @@ const allowedVoters = () => {
   const [formInput, setFormInput] = useState({
     name: '',
     address: '',
-    position: '',
+    age: '',
   });
 
   const router = useRouter();
@@ -57,7 +57,7 @@ const allowedVoters = () => {
                 Add:&nbsp; <span>{formInput.address.slice(0, 20)} </span>
               </p>
               <p>
-                Pos:&nbsp;<span>{formInput.position}</span>
+                Pos:&nbsp;<span>{formInput.age}</span>
               </p>
             </div>
           </div>
@@ -142,10 +142,10 @@ const allowedVoters = () => {
           />
           <Input
             inputType='text'
-            title='Position'
-            placeholder='Voter Position'
+            title='Age'
+            placeholder='Voter Age'
             handleClick={(e) =>
-              setFormInput({ ...formInput, position: e.target.value })
+              setFormInput({ ...formInput, age: e.target.value })
             }
           />
 
