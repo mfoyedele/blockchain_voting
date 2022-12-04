@@ -21,7 +21,7 @@ const candidateRegisration = () => {
   const [candidateForm, setCandidateForm] = useState({
     name: "",
     address: "",
-    age: "",
+    position: "",
   });
 
   const router = useRouter();
@@ -47,7 +47,7 @@ const candidateRegisration = () => {
       <div>
         {fileUrl && (
           <div className={Style.voterInfo}>
-            <img src={fileUrl} alt="asset_file" />
+            <img src={fileUrl} alt='asset_file' />
             <div className={Style.voterInfo_paragraph}>
               <p>
                 Name: <span>&nbsp;{candidateForm.name}</span>
@@ -56,7 +56,7 @@ const candidateRegisration = () => {
                 Add:&nbsp; <span>{candidateForm.address.slice(0, 20)} </span>
               </p>
               <p>
-                age:&nbsp;<span>{candidateForm.age}</span>
+                position:&nbsp;<span>{candidateForm.position}</span>
               </p>
             </div>
           </div>
@@ -76,7 +76,7 @@ const candidateRegisration = () => {
               {candidateArray.map((el, i) => (
                 <div key={i + 1} className={Style.card_box}>
                   <div className={Style.image}>
-                    <img src={el[3]} alt="Profile photo" />
+                    <img src={el[3]} alt='Profile photo' />
                   </div>
 
                   <div className={Style.card_info}>
@@ -109,8 +109,8 @@ const candidateRegisration = () => {
                       src={images.upload}
                       width={150}
                       height={150}
-                      objectFit="contain"
-                      alt="file upload"
+                      objectFit='contain'
+                      alt='file upload'
                     />
                   </div>
 
@@ -124,33 +124,33 @@ const candidateRegisration = () => {
 
         <div className={Style.input__container}>
           <Input
-            inputType="text"
-            title="Name"
-            placeholder="Voter Name"
+            inputType='text'
+            title='Name'
+            placeholder='Voter Name'
             handleClick={(e) =>
               setCandidateForm({ ...candidateForm, name: e.target.value })
             }
           />
           <Input
-            inputType="text"
-            title="Address"
-            placeholder="Voter Address"
+            inputType='text'
+            title='Address'
+            placeholder='Voter Address'
             handleClick={(e) =>
               setCandidateForm({ ...candidateForm, address: e.target.value })
             }
           />
           <Input
-            inputType="text"
-            title="Age"
-            placeholder="Voter Position"
+            inputType='text'
+            title='Position'
+            placeholder='Voter Position'
             handleClick={(e) =>
-              setCandidateForm({ ...candidateForm, age: e.target.value })
+              setCandidateForm({ ...candidateForm, position: e.target.value })
             }
           />
 
           <div className={Style.Button}>
             <Button
-              btnName="Authorized Candidate"
+              btnName='Authorized Candidate'
               handleClick={() => setCandidate(candidateForm, fileUrl, router)}
             />
           </div>
@@ -159,7 +159,7 @@ const candidateRegisration = () => {
 
       <div className={Style.createdVorter}>
         <div className={Style.createdVorter__info}>
-          <Image src={images.creator} alt="user profile" />
+          <Image src={images.creator} alt='user profile' />
           <p>Notice</p>
           <p>
             Organizer <span>0xf39Fd6e51..</span>
