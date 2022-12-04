@@ -1,14 +1,14 @@
-import { useState, useMemo, useCallback, useContext, useEffect } from "react";
-import { useRouter } from "next/router";
-import { useDropzone } from "react-dropzone";
-import Image from "next/image";
+import { useState, useMemo, useCallback, useContext, useEffect } from 'react';
+import { useRouter } from 'next/router';
+import { useDropzone } from 'react-dropzone';
+import Image from 'next/image';
 
 //INTRNAL IMPORT
-import { VotingContext } from "../context/Voter";
-import Style from "../styles/allowedVoter.module.css";
-import images from "../assets";
-import Button from "../components/Button/Button";
-import Input from "../components/Input/Input";
+import { VotingContext } from '../context/Voter';
+import Style from '../styles/allowedVoter.module.css';
+import images from '../assets';
+import Button from '../components/Button/Button';
+import Input from '../components/Input/Input';
 
 const candidateRegisration = () => {
   const [fileUrl, setFileUrl] = useState(null);
@@ -19,9 +19,9 @@ const candidateRegisration = () => {
     candidateArray,
   } = useContext(VotingContext);
   const [candidateForm, setCandidateForm] = useState({
-    name: "",
-    address: "",
-    position: "",
+    name: '',
+    address: '',
+    position: '',
   });
 
   const router = useRouter();
@@ -35,7 +35,7 @@ const candidateRegisration = () => {
 
   const { getRootProps, getInputProps } = useDropzone({
     onDrop,
-    accept: "image/*",
+    accept: 'image/*',
     maxSize: 5000000,
   });
 
@@ -126,7 +126,7 @@ const candidateRegisration = () => {
           <Input
             inputType='text'
             title='Name'
-            placeholder='Voter Name'
+            placeholder='Candidate Name'
             handleClick={(e) =>
               setCandidateForm({ ...candidateForm, name: e.target.value })
             }
@@ -134,7 +134,7 @@ const candidateRegisration = () => {
           <Input
             inputType='text'
             title='Address'
-            placeholder='Voter Address'
+            placeholder='Candidate Address'
             handleClick={(e) =>
               setCandidateForm({ ...candidateForm, address: e.target.value })
             }
@@ -142,7 +142,7 @@ const candidateRegisration = () => {
           <Input
             inputType='text'
             title='Position'
-            placeholder='Voter Position'
+            placeholder='Candidate Position'
             handleClick={(e) =>
               setCandidateForm({ ...candidateForm, position: e.target.value })
             }
