@@ -11,9 +11,10 @@
 * ipfs-http-client 
 * Polygon Mumbai Network
 
-# Use of Product
+# Use of Product 
+A decentralized blockchain voting application that uses blockchain technology as a means to either aid or take care of casting and counting ballots.
 
 # A brief description 
-A secure blockchainh voting system that has great potential to decrease organizational costs and increase voter turnout. It eliminates the need to print ballot papers or open polling stations-voters can vote from wherever there is an Internet connection.
+A blockchain-based application, which improves the security and decreases the cost of hosting a nationwide election.
 
 
