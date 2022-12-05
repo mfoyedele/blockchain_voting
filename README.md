@@ -1,7 +1,7 @@
 
 # Project Stack 
-*NextJs 
-*Ether 
+* NextJs 
+* Ether 
 *hardhat 
 *Solidity 
 *MetaMask 
